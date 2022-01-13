@@ -1,0 +1,88 @@
+*********************************************
+ * Chess (Java programming language)
+ * Lalu Zidane Alif Akbar
+*********************************************
+
+
+OVERVIEW:
+
+ This program allows the user to play chess against an AI who makes decisions based 
+ on a complex greedy best first search algorithm. Move sets with specific qualification 
+ criteria are put together. Priorities are assigned to these sets and the AI determines 
+ the best move for it to make based on the intersections of all of the move sets. 
+ Decisions by the AI are made instantaneously due to the nature of the algorithm used.
+ 
+INCLUDED FILES:
+
+ * StartGame.java -   source file with main method
+ * ChessPiece.java -  source file
+ * Bishop.java -      source file
+ * King.java -        source file
+ * Knight.java -      source file
+ * Pawn.java -        source file
+ * Queen.java -       source file
+ * Rook.java -        source file
+ * Hyphen.java -      source file
+ * ChessBoard.java -  source file
+ * MoveCommand.java - source file
+ * Player.java -      source file
+ * README -           this file
+ 
+ An example of a correctly formatted text file for inputing the state of a chess board is 
+ shown below. Lower case letters represent black piece, upper case letters represent 
+ white pieces, knights are either 'n' or 'N', and hyphens are used to represent empty tiles 
+ on chess boards.
+
+   r n b q k b n r
+   p p p p p p p p
+   - - - - - - - -
+   - - - - - - - -
+   - - - - - - - -
+   - - - - - - - -
+   P P P P P P P P
+   R N B Q K B N R
+
+   
+COMPILING AND RUNNING:
+
+ This program can be run from within an IDE (Integrated Development Environment) which 
+ accommodates the Java programming language, or from the command line.
+ 
+ The following instructions are for command-line instructions in a Linux system.
+ 
+ From the directory containing all source files, compile both classes with the command:
+ $ javac *.java
+
+ Run the Solver class file with this command:
+ $ java StartGame
+ 
+ At the start of this program and each following turn, the AI will wait for the user to 
+ enter a move. If the user's move is not valid, an info message will be shown on the upper
+ right hand side of the JFrame. If the move is valid, the AI will make its move and wait 
+ for the user's next move. This repeats until a check mate board state is reached.
+
+
+PROGRAM DESIGN AND IMPORTANT CONCEPTS:
+
+ Move commands entered by the user by selecting the starting tile and the ending tile. 
+ By default, the user is always white and the board is set to the default setup for Chess.
+ The initially setup of the AI's greedy best first search algorithm took a lot of work but 
+ is very scalable. At this point it will be easy to further improve the decision making 
+ process of the AI. Additional complexities will be incorporated when its improvement slows. 
+
+ 
+TESTING:
+
+ Individual bugs were found and fixed until there were no issues when when running this program. 
+ The current problems are logic issues with the AI decision making algorithm. However, it still 
+ performs well for the time being. Code to check for draw chess board states and stale mates has 
+ not been added yet. This will be fixed in a later version of this project.
+
+ 
+DISCUSSION:
+ 
+ This project is the culmination of weeks of planning and several weekends of long coding sessions. 
+ The entire process was very enjoyable for me and I plan on continuing to improve the AI until it 
+ wins a majority of games it plays against humans. Machine learning topics will be visited in the 
+ future. AI's will play other instances of the new AI class and results will be used for self-improvement.
+
